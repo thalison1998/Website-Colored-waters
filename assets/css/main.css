@@ -1,0 +1,101 @@
+:root{
+ --colorCeladon:#1C7094;
+ --colorBlueMarine:#173365;
+ --colorStrongOrange:#F28705;
+ --colorModerateOrange:#fdb122;
+}
+
+
+*{
+    margin:0;
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    text-decoration:none;
+    list-style:none;
+    font-family: 'Anton', sans-serif;
+    color:white;
+    font-family: 'Be Vietnam', sans-serif
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-size: 1.4rem;
+}
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.header{
+    animation: gradiente 8s ease-in-out infinite alternate; 
+    background:linear-gradient(-45deg,#1C7094,#173365,#1C7094)no-repeat;
+    padding: 2rem 0;
+    background-size: 200% 200%;
+}
+@keyframes gradiente {
+    from{
+        background-position: 0 50%;
+    }
+    to{
+        background-position: 100% 50%;
+    }
+}
+.header-container{
+    display: flex;
+    padding: 0 1rem;
+    align-items: center;
+    justify-content: space-between;
+}.logo{
+    max-width: 18rem;
+}.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex:1;
+}
+.list-links{
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+}
+.wrapper-btn{
+    display: flex;
+}
+.btn{
+    border: none;
+    width: 12rem;
+    height: 3.5rem;
+    padding: 0 0 .5rem 0;
+    background-color: transparent;
+    letter-spacing: .3rem;
+    cursor: pointer;
+}
+.btn-flashy{
+background-color: var(--colorModerateOrange);
+border-radius: 1rem;
+font-size: 1.5rem;
+font-weight: 500;
+width: 13rem;
+height: 3.5rem;
+transition: .3s ease-in-out;
+}
+.btn-flashy:hover{
+background-color: var(--colorStrongOrange);
+}
+.btn-discreet{
+font-size: 1.5rem;
+font-weight: 500;
+width: 7rem;
+height: 3.2rem;
+
+}
+.btn-discreet:hover{
+    border-bottom: solid 1px var(--colorModerateOrange);
+    transition: .3s ease-in-out;
+}
+
+.btn + .btn{
+ margin-left: 2rem;
+}
