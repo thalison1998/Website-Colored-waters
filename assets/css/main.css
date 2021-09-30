@@ -3,6 +3,7 @@
  --colorBlueMarine:#173365;
  --colorStrongOrange:#F28705;
  --colorModerateOrange:#fdb122;
+ --colorBlack:#252525;
 }
 
 
@@ -13,7 +14,6 @@
     box-sizing:border-box;
     text-decoration:none;
     list-style:none;
-    font-family: 'Anton', sans-serif;
     color:white;
     font-family: 'Be Vietnam', sans-serif
 }
@@ -63,10 +63,10 @@ img {
     width: 100%;
     position: absolute;
     left: 0;
-    background-color: #173365;
+    background-color: var(--colorBlueMarine);
     bottom: -80px;
-    padding: 2rem 0;
-    border-top:solid 1px #1C7094;
+    padding: 1.6rem 0;
+    border-top:solid 1px var(--colorCeladon);
 }
 .list-links{
     display: flex;
@@ -76,6 +76,40 @@ img {
     width: 100%;
     max-width: 96rem;
 }
+.item-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:3.5rem;
+    width: 13rem;
+}
+.item-link:hover{
+   animation:xxx .3s ease-out forwards;
+}
+@keyframes xxx {
+    from{
+        border-radius:none; 
+        background-color:none;
+    }
+    to{
+        border-radius: 10px; 
+        background-color:var(--colorStrongOrange);
+    }
+}
+
+.lni-ticket{
+    font-size: 2.5rem;
+    margin-right: .5rem;
+}
+.fa-surprise{
+    font-size: 2rem;
+    margin-right: .5rem;
+}
+.fa-info,.fa-university{
+    font-size: 1.7rem; 
+    margin-right: .5rem;
+}
+
 .wrapper-btn{
     display: flex;
 }
