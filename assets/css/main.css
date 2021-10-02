@@ -3,6 +3,7 @@
  --colorBlueMarine:#173365;
  --colorStrongOrange:#F28705;
  --colorModerateOrange:#fdb122;
+ --colorBlack:#252525;
 }
 
 
@@ -13,7 +14,6 @@
     box-sizing:border-box;
     text-decoration:none;
     list-style:none;
-    font-family: 'Anton', sans-serif;
     color:white;
     font-family: 'Be Vietnam', sans-serif
 }
@@ -46,21 +46,16 @@ img {
     display: flex;
     padding: 0 1rem;
     align-items: center;
+    flex-wrap: wrap;
     justify-content: space-between;
+    position: relative;
 }.logo{
     max-width: 18rem;
-}.menu{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex:1;
 }
-.list-links{
+.navigation{
     display: flex;
-    margin: 0 auto;
-    align-items: center;
-}
-.wrapper-btn{
+    flex-wrap: wrap;
+}.wrapper-btn{
     display: flex;
 }
 .btn{
@@ -99,3 +94,57 @@ height: 3.2rem;
 .btn + .btn{
  margin-left: 2rem;
 }
+.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    background-color: var(--colorBlueMarine);
+    bottom: -80px;
+    padding: 1.6rem 0;
+    border-top:solid 1px var(--colorCeladon);
+}
+.list-links{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly; 
+    margin: 0 auto;
+    width: 100%;
+    flex-wrap: wrap;
+    max-width: 96rem;
+}
+.item-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:3.5rem;
+    width: 13rem;
+}
+.item-link:hover{
+   animation:linkEffect .3s ease-out forwards;
+}
+@keyframes linkEffect {
+    to{
+        border-radius: 10px; 
+        background-color:var(--colorStrongOrange);
+    }
+}
+
+.lni-ticket{
+    font-size: 2.5rem;
+    margin-right: .5rem;
+    margin-bottom: -.3rem;
+}
+.fa-surprise{
+    font-size: 2rem;
+    margin-right: .5rem;
+    margin-bottom: -.3rem;
+}
+.fa-info,.fa-university{
+    font-size: 1.7rem; 
+    margin-right: .5rem;
+}
+
+
