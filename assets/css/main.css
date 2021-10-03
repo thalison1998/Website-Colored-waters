@@ -10,7 +10,6 @@
 *{
     margin:0;
     padding:0;
-    margin:0;
     box-sizing:border-box;
     text-decoration:none;
     list-style:none;
@@ -102,8 +101,8 @@ height: 3.2rem;
     position: absolute;
     left: 0;
     background-color: var(--colorBlueMarine);
-    bottom: -80px;
-    padding: 1.6rem 0;
+    bottom: -8rem;
+    padding: 1.6rem 1rem;
     border-top:solid 1px var(--colorCeladon);
 }
 .list-links{
@@ -115,6 +114,7 @@ height: 3.2rem;
     flex-wrap: wrap;
     max-width: 96rem;
 }
+
 .item-link{
     display: flex;
     justify-content: center;
@@ -147,4 +147,4 @@ height: 3.2rem;
     margin-right: .5rem;
 }
 
-
+/* section-hero */
