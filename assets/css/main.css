@@ -101,7 +101,7 @@ height: 3.2rem;
     left: 0;
     background-color: var(--colorBlueMarine);
     bottom: -8rem;
-    padding: 1.6rem 1rem;
+    padding: 1.6rem 2rem;
     border-top:solid 1px var(--colorCeladon);
 }
 .list-links{
@@ -120,8 +120,9 @@ height: 3.2rem;
     align-items: center;
     height:3.5rem;
     width: 13rem;
+    font-size:1.6rem
 }
-.drop-menu.on{
+.drop-menu.on,.drop-menu:hover{
    animation:linkEffect .3s ease-out forwards;
 }
 @keyframes linkEffect {

@@ -8,10 +8,16 @@
     padding: 2rem;
     top:5rem;
     display: none;
-    width: 150px;
+    width: 20rem;
     background:linear-gradient(-45deg,#1C7094,#173365);
     border:solid 2px var(--colorStrongOrange);
     animation: drop .3s ease-in-out;
+}
+.drop-link{
+    display: block;
+    padding:1rem;
+    margin:1rem 0;
+    font-size: 1.6rem;
 }
 @keyframes drop{
     from{
@@ -31,7 +37,7 @@
     display: block;
     position: absolute;
     top: -2rem;
-    left: 5.6rem;
+    left: 8.3rem;
     width: 0px;
     height: 0px;
     border-left: 1.9rem solid transparent;

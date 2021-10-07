@@ -31,7 +31,6 @@
 }
 .navigation{
     flex-direction: column-reverse;
-    max-width: 300px;
     position: absolute;
     top:10.5rem;
     right: 0;
@@ -41,7 +40,6 @@
     display: flex;
 }
 .menu{
-    width: 100%;
     position: initial;
 }
 
@@ -62,7 +60,7 @@
     margin: 1rem 0;
 }
 .drop-list{
-    left:-17rem;
+    left:-22rem;
     top:0
 }
 .drop-list::after{
@@ -70,7 +68,7 @@
     display: block;
     position: absolute;
     top: 0.7rem;
-    left: 14.6rem;
+    left: 19.6rem;
     width: 0px;
     height: 0px;
     border-bottom: 1.9rem solid transparent;
