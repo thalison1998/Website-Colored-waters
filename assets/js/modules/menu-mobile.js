@@ -7,7 +7,8 @@ export default function menuMobile(btn, menu) {
   let events = ["click", "touchstart"];
 
   const activeMenuMobile = (e) => {
-    e.preventDefault()
+    if(e.cancelable) e.preventDefault()
+    
     btnMobile.classList.add(classSelect);
     menuMob.classList.add(classSelect);
     
