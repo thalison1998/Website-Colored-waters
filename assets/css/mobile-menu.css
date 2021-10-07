@@ -78,6 +78,9 @@
 .drop-menu{
     margin:.7rem 0;
 }
+.drop-menu:disabled:hover{
+animation:linkEffect .3s ease-out forwards;
+}
 
 }
 

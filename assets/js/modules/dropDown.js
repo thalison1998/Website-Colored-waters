@@ -4,7 +4,6 @@ export default function dropdownMenu(listDrop) {
   let events = ["click", "touchstart"];
 
   const activeDropDown = (e) => {
-    e.preventDefault()
     const element = e.currentTarget;
     element.classList.add("on");
 
