@@ -4,8 +4,8 @@
  --colorStrongOrange:#F28705;
  --colorModerateOrange:#fdb122;
  --colorBlack:#252525;
+ --colorWhite:#eceaea;
 }
-
 
 *{
     margin:0;
@@ -13,7 +13,7 @@
     box-sizing:border-box;
     text-decoration:none;
     list-style:none;
-    color:white;
+    color:var(--colorBlack);
     font-family: 'Be Vietnam', sans-serif
 }
 html{
@@ -26,6 +26,10 @@ img {
     display: block;
     max-width: 100%;
 }
+a,span,.lni,.far,.fas{
+color:var(--colorWhite);
+}
+
 
 .header{
     animation: gradiente 8s ease-in-out infinite alternate; 
@@ -55,6 +59,7 @@ img {
 .navigation{
     display: flex;
     flex-wrap: wrap;
+    z-index: 1000;
 }
 .wrapper-btn{
     display: flex;
@@ -67,6 +72,7 @@ img {
     background-color: transparent;
     letter-spacing: .3rem;
     cursor: pointer;
+    color:var(--colorWhite);
 }
 .btn-flashy{
 background-color: var(--colorModerateOrange);
@@ -120,8 +126,9 @@ height: 3.2rem;
     align-items: center;
     height:3.5rem;
     width: 13rem;
-    font-size:1.6rem
+    font-size:1.6rem;
 }
+
 .drop-menu.on,.drop-menu:hover{
    animation:linkEffect .3s ease-out forwards;
 }
@@ -148,3 +155,17 @@ height: 3.2rem;
 }
 
 /* section-hero */
+
+.section-slide{
+   margin-top:6rem;
+}
+.slide-container{
+    display: flex;
+    justify-content: center;
+    height: 38vw;
+    width: 100%;
+    position: relative;
+    border-top:solid 1px var(--colorCeladon);
+    border-bottom:solid 1px var(--colorCeladon);
+}
+

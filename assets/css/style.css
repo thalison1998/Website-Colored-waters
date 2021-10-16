@@ -1,5 +1,7 @@
-
-@import 'dropdown.css';
 @import 'main.css';
+@import 'dropdown.css';
 @import 'mobile-menu.css';
 @import 'main-responsive.css';
+@import 'slide.css';
+@import 'hide-and-show-text.css'
+

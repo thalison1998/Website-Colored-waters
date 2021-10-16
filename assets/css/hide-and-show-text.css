@@ -1,0 +1,6 @@
+.section-text{
+    opacity:0;
+}
+.section-text.on{
+    opacity:1;
+}

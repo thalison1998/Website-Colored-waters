@@ -4,14 +4,14 @@ export default function menuMobile(btn, menu) {
   const menuMob = document.querySelector(menu);
   const classSelect = "on";
 
-  let events = ["click", "touchstart"];
+  const events = ["click", "touchstart"];
 
   const activeMenuMobile = (e) => {
-    if(e.cancelable) e.preventDefault()
-    
+    if (e.cancelable) e.preventDefault();
+
     btnMobile.classList.add(classSelect);
     menuMob.classList.add(classSelect);
-    
+
     clickOut(menuMob, events, () => {
       btnMobile.classList.remove(classSelect);
       menuMob.classList.remove(classSelect);
@@ -19,14 +19,14 @@ export default function menuMobile(btn, menu) {
   };
 
   const init = () => {
-    if (!!events && !!btnMobile)
+    if (!!events && !!btnMobile) {
       events.forEach((event) => {
         btnMobile.addEventListener(event, activeMenuMobile);
       });
+    }
   };
 
   return Object.freeze({
     init,
-  })
+  });
 }
-

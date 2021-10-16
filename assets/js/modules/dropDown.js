@@ -1,11 +1,12 @@
 import clickOut from "./clickOut";
+
 export default function dropdownMenu(listDrop) {
   const dropMenu = document.querySelectorAll(listDrop);
-  let events = ["click", "touchstart"];
+  const events = ["click", "touchstart"];
 
   const activeDropDown = (e) => {
-    if(e.cancelable) e.preventDefault()
-    
+    if (e.cancelable) e.preventDefault();
+
     const element = e.currentTarget;
     element.classList.add("on");
 
@@ -15,7 +16,7 @@ export default function dropdownMenu(listDrop) {
   };
 
   const init = () => {
-    if (!!dropMenu) {
+    if (dropMenu) {
       dropMenu.forEach((item) => {
         events.forEach((event) => {
           item.addEventListener(event, activeDropDown);
@@ -25,5 +26,5 @@ export default function dropdownMenu(listDrop) {
   };
   return Object.freeze({
     init,
-  })
+  });
 }
