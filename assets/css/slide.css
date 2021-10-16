@@ -77,5 +77,5 @@ right:.3rem;
 }
 .section-text{
     position: absolute;
-    z-index: 300000;
+    z-index: 300;
 }

@@ -2,7 +2,7 @@ import showAndHiddenText from "./hideAndShowText";
 
 export default function slide() {
   const imgSlide = document.querySelectorAll(".img-slide");
-  const slideContainer = document.querySelector(".slide-container");
+  const slideContainer = document.querySelector(".container-slide");
   const btnNext = document.querySelector(".next");
   const btnPrev = document.querySelector(".prev");
   const events = ["click", "touchstart"];
@@ -32,7 +32,8 @@ export default function slide() {
   const changeSlide = (index = 0) => {
     imgSlide.forEach((item) => item.classList.remove("on"));
     imgSlide[index].classList.add("on");
-
+    currentIndex = index;
+    
     const textShow = showAndHiddenText();
     textShow.textChange(index);
 
@@ -55,10 +56,6 @@ export default function slide() {
 
   // controlado que realiza a mudança do slide //
 
-  if (changeSlide) {
-    const curretIndex = changeSlide();
-    currentIndex = curretIndex;
-  }
 
   // avanço e retrocesso do slide//
   const startNext = () => {
@@ -90,7 +87,6 @@ export default function slide() {
       controlEvents(currentIndex);
     }, timerx);
   };
-  timer();
 
   const slideStop = () => {
     clearInterval(timerInterval);
@@ -104,13 +100,18 @@ export default function slide() {
       btnPrev.addEventListener(event, prev);
     });
   };
-  btnEvents();
 
+  const enterAndLeaveEvent = () => {
   slideContainer.addEventListener("mouseenter", slideStop);
   slideContainer.addEventListener("mouseleave", slideReturn);
-
+  }
+  const init = () => {
+    enterAndLeaveEvent();
+    btnEvents();
+    timer();
+  }
   return {
-    changeSlide,
-    timer,
+    init,
+    changeSlide
   };
 }

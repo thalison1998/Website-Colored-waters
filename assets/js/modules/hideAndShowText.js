@@ -1,5 +1,5 @@
 export default function showAndHiddenText(element) {
-  const elementSelect = element || '.section-text';
+  const elementSelect = element || '.info-slide';
   const text = document.querySelectorAll(elementSelect);
 
   const textChange = (index) => {
