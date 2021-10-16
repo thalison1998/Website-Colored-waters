@@ -1,5 +1,9 @@
 
-
+@media(max-width:760px){
+    .section-slide{
+        margin-top: initial;
+    }
+}
 @media(max-width:480px){
     html{
         font-size:55%;

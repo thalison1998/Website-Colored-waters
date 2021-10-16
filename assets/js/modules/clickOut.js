@@ -1,5 +1,5 @@
-export default function clickOut  (element, events, callback) {
-  const attEventAdd = "data-on";
+export default function clickOut(element, events, callback) {
+  const attEventAdd = 'data-on';
   const html = document.documentElement;
 
   const checkOutside = (e) => {
@@ -15,9 +15,9 @@ export default function clickOut  (element, events, callback) {
   };
 
   if (!element.hasAttribute(attEventAdd)) {
-    element.setAttribute(attEventAdd, "");
+    element.setAttribute(attEventAdd, '');
     events.forEach((event) => {
       setTimeout(() => html.addEventListener(event, checkOutside));
     });
   }
-};
+}
