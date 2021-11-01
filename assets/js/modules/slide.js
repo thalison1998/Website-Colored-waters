@@ -1,21 +1,21 @@
-import showAndHiddenText from "./hideAndShowText";
+import showAndHidden from './hideAndShow';
 
-export default function slide() {
-  const imgSlide = document.querySelectorAll(".img-slide");
-  const slideContainer = document.querySelector(".container-slide");
-  const btnNext = document.querySelector(".next");
-  const btnPrev = document.querySelector(".prev");
-  const events = ["click", "touchstart"];
+export default function slide(timerx) {
+  const imgSlide = document.querySelectorAll('.img-slide');
+  const slideContainer = document.querySelector('.container-slide');
+  const btnNext = document.querySelector('.next');
+  const btnPrev = document.querySelector('.prev');
+  const events = ['click', 'touchstart'];
   const slideArray = [...imgSlide];
   const imgLength = imgSlide.length;
-  
+
   let btnControl;
   let currentIndex = 0;
   let timerInterval;
 
   const controlSlide = () => {
-    const containerControl = document.createElement("div");
-    containerControl.classList.add("control-slide");
+    const containerControl = document.createElement('div');
+    containerControl.classList.add('control-slide');
     slideArray.forEach((li, index) => {
       containerControl.innerHTML += `<button data-control="${index}">
       </button>`;
@@ -23,28 +23,29 @@ export default function slide() {
     slideContainer.append(containerControl);
   };
   controlSlide();
+
   const controlEvents = (index) => {
-    btnControl = slideContainer.querySelectorAll("[data-control]");
-    btnControl.forEach((item) => item.classList.remove("on"));
-    btnControl[index].classList.add("on");
+    btnControl = slideContainer.querySelectorAll('[data-control]');
+    btnControl.forEach((item) => item.classList.remove('on'));
+    btnControl[index].classList.add('on');
   };
 
   const changeSlide = (index = 0) => {
-    imgSlide.forEach((item) => item.classList.remove("on"));
-    imgSlide[index].classList.add("on");
+    imgSlide.forEach((item) => item.classList.remove('on'));
+    imgSlide[index].classList.add('on');
     currentIndex = index;
-    
-    const textShow = showAndHiddenText();
-    textShow.textChange(index);
+
+    const textShow = showAndHidden('.info-slide');
+    textShow.change(index);
 
     controlEvents(index);
     return index;
   };
 
   const changeControlSlide = () => {
-    btnControl = slideContainer.querySelectorAll("[data-control]");
+    btnControl = slideContainer.querySelectorAll('[data-control]');
     btnControl.forEach((link) => {
-      link.addEventListener("click", (e) => {
+      link.addEventListener('click', (e) => {
         e.preventDefault();
         const indexSelect = e.target.dataset.control;
         currentIndex = indexSelect;
@@ -52,10 +53,9 @@ export default function slide() {
       });
     });
   };
-  changeControlSlide();
+  
 
   // controlado que realiza a mudança do slide //
-
 
   // avanço e retrocesso do slide//
   const startNext = () => {
@@ -81,7 +81,7 @@ export default function slide() {
   };
 
   // troca de slide por tempo //
-  const timer = (timerx = 3000) => {
+  const timer = () => {
     timerInterval = setInterval(() => {
       startNext();
       controlEvents(currentIndex);
@@ -102,16 +102,18 @@ export default function slide() {
   };
 
   const enterAndLeaveEvent = () => {
-  slideContainer.addEventListener("mouseenter", slideStop);
-  slideContainer.addEventListener("mouseleave", slideReturn);
-  }
+    slideContainer.addEventListener('mouseenter', slideStop);
+    slideContainer.addEventListener('mouseleave', slideReturn);
+  };
   const init = () => {
     enterAndLeaveEvent();
     btnEvents();
     timer();
-  }
+    changeControlSlide();
+  };
+
   return {
     init,
-    changeSlide
+    changeSlide,
   };
 }

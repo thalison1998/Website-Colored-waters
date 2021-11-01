@@ -1,4 +1,31 @@
 
+@media(max-width:860px){
+    .wrapper-info{
+        width:initial;
+    }
+}
+@media(max-width:596px){
+    .info-star-list{
+        margin-bottom: 2rem;
+    }
+}
+@media(max-width:526px){
+    .info-star-list{
+       text-align: center;
+    }
+}
+@media(max-width:463px){
+    .item-stars.on::after{
+        top: 7.6rem;
+        left: -1.5rem;
+        width: 0px;
+        height: 0px;
+        border-right: 5.0rem solid transparent;
+        border-left: 5.0rem solid transparent;
+        border-bottom: 5.0rem solid var(--colorBlueMarine);
+    }
+}
+
 @media(max-width:760px){
     .section-slide{
         margin-top: initial;
@@ -13,4 +40,6 @@
     html{
         font-size:50%;
     }
+
 }
+
