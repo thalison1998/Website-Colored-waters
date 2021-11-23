@@ -37,7 +37,6 @@ export default function slide(timerx) {
 
     const textShow = showAndHidden('.info-slide');
     textShow.change(index);
-
     controlEvents(index);
     return index;
   };

@@ -3,15 +3,70 @@
     .wrapper-info{
         width:initial;
     }
+    .info-stars-img img{
+        height: 30rem;
+    }
 }
+
+@media(max-width:760px){
+    .section-slide{
+        margin-top: initial;
+    }
+    .container-opinions{
+        grid-template-columns:repeat(4,300px);
+        justify-items: center;
+        overflow-x: scroll;
+        gap:5rem;
+    }.wrapper-opinions{
+        flex-direction: row;
+        max-width: 100%;
+        margin-bottom: 3rem;
+    }
+    .text-opinions p{
+        font-size:1.6rem;
+    }
+    .sending-newsletters{
+        flex-direction: column;
+    }
+    .input-newsletters{
+        width: 70%;
+        margin: initial;
+        margin-bottom: 1.5rem;
+    }
+    .btn-newsletters{
+        width: 70%;
+    }
+
+    .container-footer{
+        grid-template-columns: 1fr;
+        gap:1.5rem;
+    }
+    .footer-list{
+        justify-items: center;
+    }
+   
+}
+
 @media(max-width:596px){
     .info-star-list{
         margin-bottom: 2rem;
     }
+    .footer-list{
+        grid-template-columns: 1fr;
+        justify-items: start;
+        gap: 2rem;
+    }
 }
+
 @media(max-width:526px){
     .info-star-list{
        text-align: center;
+    }
+}
+
+@media(max-width:480px){
+    html{
+        font-size:55%;
     }
 }
 @media(max-width:463px){
@@ -24,18 +79,14 @@
         border-left: 5.0rem solid transparent;
         border-bottom: 5.0rem solid var(--colorBlueMarine);
     }
+    .input-newsletters{
+        width: 100%;
+    }
+    .btn-newsletters{
+        width: 100%;
+    }
 }
 
-@media(max-width:760px){
-    .section-slide{
-        margin-top: initial;
-    }
-}
-@media(max-width:480px){
-    html{
-        font-size:55%;
-    }
-}
 @media(max-width:380px){
     html{
         font-size:50%;

@@ -1,0 +1,34 @@
+.arrow-left,
+.arrow-right {
+  position: absolute;
+  display: none;
+  font-size: 3rem;
+  bottom: 0.5rem;
+  width: 20px;
+  animation: infinites 1s infinite alternate-reverse;
+}
+
+@keyframes infinites {
+  from {
+    transform: translateX(-10px);
+  }
+  to {
+    transform: translateX(initial);
+  }
+}
+@media (max-width: 760px) {
+  .arrow-left {
+    display: none;
+    left: 2rem;
+  }
+  .arrow-right {
+    display: block;
+    right: 2rem;
+  }
+  .arrow-right.off {
+    display: none;
+  }
+  .arrow-left.on {
+    display: block;
+  }
+}
