@@ -17,7 +17,7 @@ export default function slide(timerx) {
     const containerControl = document.createElement('div');
     containerControl.classList.add('control-slide');
     slideArray.forEach((li, index) => {
-      containerControl.innerHTML += `<button data-control="${index}">
+      containerControl.innerHTML += `<button data-control="${index}" aria-label="control index${index}">
       </button>`;
     });
     slideContainer.append(containerControl);

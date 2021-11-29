@@ -26,6 +26,10 @@ img {
     display: block;
     max-width: 100%;
 }
+label{
+    display: block;
+    text-align: center;
+}
 a,span,.lni,.far,.fas{
 color:var(--colorWhite);
 }
@@ -270,7 +274,7 @@ font-size: clamp(2rem,2.3rem + 1.6vw, 6rem);
 .text{
     letter-spacing: 1px;
     line-height: 2.2rem;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
 }
 /* STARS */
 .section-stars{
@@ -396,7 +400,6 @@ svg{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 2rem;
 }
 .input-newsletters{
     width: 50%;
@@ -413,7 +416,7 @@ svg{
     font-weight: bold;
     font-size: 1.8rem;
     outline: none;
-    background-color: var(--colorModerateOrange);
+    background-color: var(--colorCeladon);
     color: var(--colorWhite);
     border: none;
     cursor: pointer;
@@ -433,7 +436,8 @@ svg{
     position: relative;
 }
 .wrapper-localization{
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     margin-top:5rem;
 }
 .info-localization {
@@ -446,10 +450,11 @@ svg{
 }
 
 .hour{
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     align-self: center;
-    color: var(--colorStrongOrange);
-    font-weight: 600;
+    color: var(--colorBlueMarine);
+    font-weight: 700;
+    text-transform: uppercase;
     
 }
 .hour span{

@@ -44,6 +44,17 @@
     .footer-list{
         justify-items: center;
     }
+    .wrapper-localization{
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .info-localization{
+        padding: 1rem ;
+        justify-content: center;
+    }
+    .info-localization .title{
+        text-align: center;
+    }
    
 }
 
