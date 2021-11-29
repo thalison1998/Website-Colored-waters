@@ -41,12 +41,13 @@
 }
 .btn-slide{
     position:absolute;
-    width: 3rem;
-    height: 10rem;
+    width: 4rem;
+    height: 4rem;
     border: none;
     background-color: var(--colorStrongOrange);
     opacity: .6;
     bottom: 50%;
+    border-radius: 50%;
     margin-bottom: -50px;
     cursor: pointer; 
     z-index: 100;
@@ -62,8 +63,6 @@ right:.3rem;
 }
 @media (max-width:723px){
     .btn-slide{
-    width: 3rem;
-    height: 8rem;
     bottom: 60%;
     }
     [data-control]{

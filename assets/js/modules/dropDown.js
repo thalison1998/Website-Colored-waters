@@ -24,7 +24,7 @@ export default function dropdownMenu(listDrop) {
       });
     }
   };
-  return Object.freeze({
+  return {
     init,
-  });
+  };
 }

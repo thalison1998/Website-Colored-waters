@@ -26,7 +26,7 @@ export default function menuMobile(btn, menu) {
     }
   };
 
-  return Object.freeze({
+  return {
     init,
-  });
+  };
 }

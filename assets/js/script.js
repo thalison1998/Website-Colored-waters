@@ -4,6 +4,7 @@ import slide from './modules/slide';
 import selectWhatAppears from './modules/selectWhatAppears';
 import signaling from './modules/signaling';
 import apiMap from './modules/apiMap';
+import scrollDownUntilAppears from './modules/scrollDownUntilAppears';
 
 const dropMenuInit = dropdownMenu('[data-dropmenu]');
 dropMenuInit.init();
@@ -20,5 +21,8 @@ selectStars.init();
 
 const arrowDirection = signaling();
 arrowDirection.init();
+
+const initAppears = scrollDownUntilAppears('[data-appear]');
+initAppears.init();
 
 apiMap();
