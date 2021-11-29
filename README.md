@@ -20,7 +20,7 @@ Pré-requisitos: Live server
 
 ```bash
 # clonar repositório
-git clone https://github.com/thalison1998/Weather-app/
+git clone https://github.com/thalison1998/Website-Colored-waters/
 
 # entrar na pasta Weather-app
 cd Weather-app
