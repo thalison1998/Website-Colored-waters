@@ -1,7 +1,7 @@
 import debounce from "./debounce";
 export default function scrollDownUntilAppears(elementSection) {
   const allSections = document.querySelectorAll(elementSection);
-  const windowMetade = window.innerHeight * 0.7;
+  const windowMetade = window.innerHeight * 0.4;
   allSections[0].classList.add("on");
   const distance = [...allSections];
 
