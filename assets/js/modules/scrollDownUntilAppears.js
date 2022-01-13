@@ -29,7 +29,7 @@ export default function scrollDownUntilAppears(elementSection) {
   };
   const init = () => {
     if (allSections) {
-      const awaitTemp = debounce(checkDistance, 300);
+      const awaitTemp = debounce(checkDistance, 150);
       window.addEventListener('scroll', awaitTemp);
     }
   };
